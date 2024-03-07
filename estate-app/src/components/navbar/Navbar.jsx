@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./navbar.scss";
+import { RiMenu5Fill } from "react-icons/ri";
+import { CgClose } from "react-icons/cg";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,6 +26,7 @@ export default function Navbar() {
             Agents
           </a>
         </div>
+
         <div className="right">
           <a href="/" className="login">
             Sign In
@@ -31,8 +34,18 @@ export default function Navbar() {
           <a href="/" className="register">
             Sign Up
           </a>
-          <div className="menuIcon">
-            <img src="/menu.png" alt="menu" onClick={() => setOpen(!open)} />
+          {/* sidebar */}
+          <div className="menuIcon" onClick={() => setOpen(!open)}>
+            {/* <img src="/menu.png" alt="menu" /> */}
+            {open ? (
+              <div className="close">
+                <CgClose size={40} color="#fff" />
+              </div>
+            ) : (
+              <div className="berger">
+                <RiMenu5Fill size={40} color="#fff" />
+              </div>
+            )}
           </div>
           <div className={open ? "menu active" : "menu"}>
             <a className="nav-link" href="/">

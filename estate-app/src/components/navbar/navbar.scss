@@ -14,10 +14,6 @@ nav {
     align-items: center;
     gap: 40px;
 
-    @include md {
-      gap: 15px;
-    }
-
     .logo {
       transition: all 0.5s ease;
       &:hover {
@@ -105,6 +101,18 @@ nav {
         display: initial;
       }
 
+      .berger {
+        background-color: black;
+        padding: 10px;
+        border-radius: 50%;
+      }
+
+      .close {
+        background-color: black;
+        padding: 10px;
+        border-radius: 50%;
+      }
+
       img {
         width: 50px;
         height: 50px;
@@ -120,7 +128,7 @@ nav {
       width: 50%;
       background-color: black;
       color: white;
-      transition: all 1s ease;
+      transition: all 0.5s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
