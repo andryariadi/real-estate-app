@@ -8,14 +8,17 @@
   padding: 0 20px;
 
   @include lg {
-    background-color: darkgreen;
+    background-color: rgb(252, 215, 202);
+    max-width: 1024px;
   }
 
   @include md {
-    background-color: darkorange;
+    background-color: rgb(189, 209, 248);
+    max-width: 768px;
   }
 
   @include sm {
-    background-color: fuchsia;
+    background-color: rgb(249, 182, 249);
+    max-width: 640px;
   }
 }
