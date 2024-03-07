@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 nav {
   //   background-color: darkcyan;
   display: flex;
@@ -12,6 +14,10 @@ nav {
     align-items: center;
     gap: 40px;
 
+    @include md {
+      gap: 15px;
+    }
+
     .logo {
       transition: all 0.5s ease;
       &:hover {
@@ -23,11 +29,14 @@ nav {
       }
     }
 
-    // nav-link
     .nav-link {
       padding: 0.5rem;
       position: relative;
       font-size: 16px;
+
+      @include sm {
+        display: none;
+      }
     }
 
     .nav-link::after {
@@ -51,7 +60,6 @@ nav {
     .nav-link:hover::after {
       transform: scale(1);
     }
-    // nav-link
   }
 
   .right {
@@ -60,17 +68,74 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 50px;
     background-color: #fcf5f3;
     height: 100%;
 
+    @include md {
+      background-color: transparent;
+    }
+
     a {
       padding: 12px 20px;
+      margin: 20px;
+
+      @include md {
+        margin: 10px;
+      }
+
+      @include sm {
+        display: none;
+      }
+    }
+
+    .login {
+      background-color: brown;
     }
 
     .register {
       background-color: goldenrod;
       border-radius: 5%;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 10;
+
+      @include sm {
+        display: initial;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      height: 100vh;
+      width: 50%;
+      background-color: black;
+      color: white;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+
+      &.active {
+        right: 0;
+      }
+
+      @include sm {
+        .nav-link {
+          display: initial;
+        }
+      }
     }
   }
 }
