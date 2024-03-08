@@ -4,6 +4,8 @@
   height: 100vh;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 
   @include xl {
     background-color: rgb(251, 190, 202);
@@ -27,5 +29,11 @@
 
   @include xs {
     background-color: rgb(233, 190, 251);
+  }
+
+  .content {
+    background-color: crimson;
+    // height: calc(100vh - 100px);
+    flex: 1;
   }
 }
