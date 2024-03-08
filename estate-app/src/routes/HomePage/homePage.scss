@@ -23,11 +23,29 @@
       }
 
       .desc {
+        line-height: 20px;
       }
 
       .countContainer {
         display: flex;
         justify-content: space-between;
+
+        .count {
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+            font-size: 36px;
+            background-color: crimson;
+            height: 48px;
+          }
+
+          h2 {
+            font-size: 18px;
+            font-weight: 300;
+            background-color: aquamarine;
+          }
+        }
       }
     }
   }
