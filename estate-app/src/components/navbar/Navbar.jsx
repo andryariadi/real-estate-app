@@ -39,14 +39,15 @@ export default function Navbar() {
             {/* <img src="/menu.png" alt="menu" /> */}
             {open ? (
               <div className="close">
-                <CgClose size={40} color="#fff" />
+                <CgClose size={35} color="#fff" />
               </div>
             ) : (
               <div className="berger">
-                <RiMenu5Fill size={40} color="#fff" />
+                <RiMenu5Fill size={35} color="#fff" />
               </div>
             )}
           </div>
+
           <div className={open ? "menu active" : "menu"}>
             <a className="nav-link" href="/">
               Home
