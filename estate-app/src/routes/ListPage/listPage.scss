@@ -1,1 +1,19 @@
 @import "../../responsive.scss";
+
+.container {
+  display: flex;
+
+  .listContainer {
+    background-color: blueviolet;
+    flex: 3;
+
+    .wrapper {
+      background-color: darkgreen;
+      padding-right: 50px;
+    }
+  }
+  .mapContainer {
+    background-color: #fde29f;
+    flex: 2;
+  }
+}
