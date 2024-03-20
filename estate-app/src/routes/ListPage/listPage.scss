@@ -2,14 +2,47 @@
 
 .container {
   display: flex;
+  height: 100%;
 
   .listContainer {
     background-color: blueviolet;
     flex: 3;
+    // height: 100%;
 
     .wrapper {
       background-color: darkgreen;
-      padding-right: 50px;
+      // height: 100%;
+      padding-right: 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+    }
+
+    .wrapper {
+      --sb-track-color: #232e33;
+      --sb-thumb-color: #6baf8d;
+      --sb-size: 5px;
+    }
+
+    .wrapper::-webkit-scrollbar {
+      width: var(--sb-size);
+    }
+
+    .wrapper::-webkit-scrollbar-track {
+      background: var(--sb-track-color);
+      border-radius: 10px;
+    }
+
+    .wrapper::-webkit-scrollbar-thumb {
+      background: var(--sb-thumb-color);
+      border-radius: 10px;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+      .wrapper {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+      }
     }
   }
   .mapContainer {
