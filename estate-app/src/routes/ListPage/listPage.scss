@@ -7,16 +7,17 @@
   .listContainer {
     background-color: blueviolet;
     flex: 3;
-    // height: 100%;
+    height: 100%;
 
     .wrapper {
       background-color: darkgreen;
-      // height: 100%;
+      height: 100%;
       padding-right: 35px;
       display: flex;
       flex-direction: column;
       gap: 50px;
       overflow-y: scroll;
+      padding-bottom: 50px;
     }
 
     .wrapper {
@@ -48,5 +49,6 @@
   .mapContainer {
     background-color: #fde29f;
     flex: 2;
+    height: 100%;
   }
 }
