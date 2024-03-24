@@ -1,0 +1,23 @@
+.detailContainer {
+  display: flex;
+
+  .details {
+    background-color: blueviolet;
+    flex: 3;
+
+    .wrapper {
+      background-color: forestgreen;
+      padding-right: 50px;
+    }
+  }
+
+  .features {
+    background-color: #fde29f;
+    flex: 2;
+
+    .wrapper {
+      background-color: chocolate;
+      padding: 0 20px;
+    }
+  }
+}
