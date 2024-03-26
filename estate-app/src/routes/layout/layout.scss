@@ -33,7 +33,34 @@
 
   .content {
     background-color: crimson;
-    height: calc(100vh - 100px);
     // flex: 1;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+  }
+
+  .content {
+    --sb-track-color: #232e33;
+    --sb-thumb-color: #6baf8d;
+    --sb-size: 5px;
+  }
+
+  .content::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  .content::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+
+  .content::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    .content {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
   }
 }
