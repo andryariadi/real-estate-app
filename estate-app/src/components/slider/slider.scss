@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .slider {
   display: flex;
   gap: 20px;
@@ -28,6 +30,10 @@
         &.rightArrow {
           transform: rotate(180deg);
         }
+
+        @include xs {
+          width: 30px;
+        }
       }
     }
 
@@ -51,6 +57,12 @@
       font-weight: bold;
       padding: 50px;
       cursor: pointer;
+
+      @include xs {
+        top: 35px;
+        right: -14px;
+        font-size: 30px;
+      }
     }
   }
 
