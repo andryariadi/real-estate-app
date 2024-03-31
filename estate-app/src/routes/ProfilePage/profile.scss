@@ -1,16 +1,63 @@
 .profile {
   background-color: brown;
+  display: flex;
+  height: 100%;
 
   .details {
     background-color: cadetblue;
+    flex: 3;
 
     .wrapper {
       background-color: chocolate;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h1 {
+        font-weight: 300;
+      }
+
+      button {
+        padding: 12px 24px;
+        background-color: goldenrod;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+      }
     }
   }
 
   .chatContainer {
+    background-color: #fde29f;
+    flex: 2;
+    height: 100%;
+
     .wrapper {
+      padding: 0 20px;
     }
   }
 }

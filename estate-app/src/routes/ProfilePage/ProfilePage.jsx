@@ -1,10 +1,11 @@
+import ListCard from "../../components/listCard/ListCard";
 import "./profile.scss";
 
 export default function ProfilePage() {
   return (
     <div className="profile">
       <div className="details">
-        <div className="warapper">
+        <div className="wrapper">
           <div className="title">
             <h1>User Information</h1>
             <button>Update Profile</button>
@@ -25,9 +26,11 @@ export default function ProfilePage() {
             <h1>My List</h1>
             <button>Create New Post</button>
           </div>
+          <ListCard />
           <div className="title">
             <h1>Saved List</h1>
           </div>
+          <ListCard />
         </div>
       </div>
       <div className="chatContainer">
