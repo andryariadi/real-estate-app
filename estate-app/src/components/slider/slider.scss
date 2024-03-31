@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 
     .arrow {
       background-color: aqua;
@@ -59,8 +60,6 @@
       cursor: pointer;
 
       @include xs {
-        top: 35px;
-        right: -14px;
         font-size: 30px;
       }
     }

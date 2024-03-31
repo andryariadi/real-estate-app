@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-d
 import Layout from "./routes/layout/layout";
 import ListPage from "./routes/ListPage/ListPage";
 import DetailPage from "./routes/SinglePage/DetailPage";
+import ProfilePage from "./routes/ProfilePage/ProfilePage";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
         {
           path: "/:id",
           element: <DetailPage />,
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage />,
         },
       ],
     },
