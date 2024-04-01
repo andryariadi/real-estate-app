@@ -1,0 +1,45 @@
+.chat {
+  background-color: darkblue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .messageContainer {
+    background-color: darkcyan;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+
+    h1 {
+      font-weight: 300;
+    }
+
+    .message {
+      background-color: azure;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      img {
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chatBox {
+    background-color: darkmagenta;
+    flex: 1;
+  }
+}

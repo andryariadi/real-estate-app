@@ -1,3 +1,4 @@
+import Chat from "../../components/chat/Chat";
 import ListCard from "../../components/listCard/ListCard";
 import "./profile.scss";
 
@@ -34,7 +35,9 @@ export default function ProfilePage() {
         </div>
       </div>
       <div className="chatContainer">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+          <Chat />
+        </div>
       </div>
     </div>
   );
