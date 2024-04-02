@@ -1,12 +1,24 @@
+@import "../../responsive.scss";
+
 .profile {
   background-color: brown;
   display: flex;
   height: 100%;
 
+  @include sm {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
   .details {
     background-color: cadetblue;
     flex: 3.03;
     overflow-y: scroll;
+
+    @include sm {
+      flex: none;
+      height: max-content;
+    }
 
     .wrapper {
       background-color: chocolate;
@@ -84,6 +96,11 @@
     background-color: #fde29f;
     flex: 2;
     height: 100vh;
+
+    @include sm {
+      flex: none;
+      height: max-content;
+    }
 
     .wrapper {
       padding: 0 20px;
